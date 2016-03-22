@@ -12,16 +12,6 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func buttonPressed(sender: AnyObject) {
         let params: [String:AnyObject] = ["key": "AIzaSyBdt7KHl07gIOeT-zshtJvh_p2nI5pDS_Y",
                                           "radius": "500",
@@ -33,10 +23,20 @@ class ViewController: UIViewController {
             response in
             if let data = response.data {
                 let json = JSON(data: data)
-                print(json)
+                let places = PlaceJSONParser.createFrom(json)
+
+                self.viewPlaces(places)
             }
         }
     }
-    
+
+
+    func viewPlaces(places: [Place]) {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+        if let placesTVC = storyboard.instantiateViewControllerWithIdentifier("PlacesTableViewController") as? PlacesTableViewController {
+            placesTVC.places = places
+            self.navigationController?.pushViewController(placesTVC, animated: true)
+        }
+    }
 }
 
