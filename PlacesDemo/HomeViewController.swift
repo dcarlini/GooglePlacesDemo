@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBAction func buttonPressed(sender: AnyObject) {
         let params: [String:AnyObject] = ["key": "AIzaSyBdt7KHl07gIOeT-zshtJvh_p2nI5pDS_Y",
