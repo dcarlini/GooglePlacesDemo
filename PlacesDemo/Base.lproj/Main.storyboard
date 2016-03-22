@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Google Places Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlacesDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,17 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkV-Gl-Pj1">
-                                <rect key="frame" x="76" y="92" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkV-Gl-Pj1">
+                                <rect key="frame" x="223" y="280" width="155" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="9Nd-uq-IV6"/>
+                                    <constraint firstAttribute="height" constant="39" id="xDX-hl-c4E"/>
+                                </constraints>
+                                <state key="normal" title="Search Places"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ev-iF-PlH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BkV-Gl-Pj1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jYG-Px-iBw"/>
+                            <constraint firstItem="BkV-Gl-Pj1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="snx-36-yob"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="P4p-Z2-BNx"/>
+                    <navigationItem key="navigationItem" title="Google Places Demo" id="P4p-Z2-BNx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
