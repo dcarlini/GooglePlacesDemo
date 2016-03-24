@@ -14,6 +14,8 @@
 		810207411CA1D09F009EAA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8102073F1CA1D09F009EAA58 /* LaunchScreen.storyboard */; };
 		815198491CA1D3EF00D9301B /* PlaceJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815198481CA1D3EF00D9301B /* PlaceJSONParser.swift */; };
 		8151984B1CA1D50500D9301B /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8151984A1CA1D50500D9301B /* PlacesTableViewController.swift */; };
+		8FA7EFA81CA218320092F84F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7EFA71CA218320092F84F /* DetailsViewController.swift */; };
+		8FA7EFAA1CA248650092F84F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA7EFA91CA248650092F84F /* MapKit.framework */; };
 		A695F2D8CA9A45726ABDEB08 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377052F6D5962824D571EF9A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		815198481CA1D3EF00D9301B /* PlaceJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceJSONParser.swift; sourceTree = "<group>"; };
 		8151984A1CA1D50500D9301B /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		8970D83A77F7EF32A71B2AD0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8FA7EFA71CA218320092F84F /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		8FA7EFA91CA248650092F84F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DE06EB7363D84420398E24CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA7EFAA1CA248650092F84F /* MapKit.framework in Frameworks */,
 				A695F2D8CA9A45726ABDEB08 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +82,7 @@
 				810207361CA1D09F009EAA58 /* AppDelegate.swift */,
 				810207381CA1D09F009EAA58 /* HomeViewController.swift */,
 				8102073A1CA1D09F009EAA58 /* Main.storyboard */,
+				8FA7EFA71CA218320092F84F /* DetailsViewController.swift */,
 				8102073D1CA1D09F009EAA58 /* Assets.xcassets */,
 				8102073F1CA1D09F009EAA58 /* LaunchScreen.storyboard */,
 				810207421CA1D09F009EAA58 /* Info.plist */,
@@ -89,6 +95,7 @@
 		FE41A577D0B8660227310E73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FA7EFA91CA248650092F84F /* MapKit.framework */,
 				377052F6D5962824D571EF9A /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -220,6 +227,7 @@
 				810207391CA1D09F009EAA58 /* HomeViewController.swift in Sources */,
 				810207371CA1D09F009EAA58 /* AppDelegate.swift in Sources */,
 				8151984B1CA1D50500D9301B /* PlacesTableViewController.swift in Sources */,
+				8FA7EFA81CA218320092F84F /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

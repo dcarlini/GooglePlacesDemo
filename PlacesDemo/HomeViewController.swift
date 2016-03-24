@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
             response in
             if let data = response.data {
                 let json = JSON(data: data)
+                print(json)
                 let places = PlaceJSONParser.createFrom(json)
 
                 self.viewPlaces(places)

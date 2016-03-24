@@ -11,6 +11,10 @@ import SwiftyJSON
 
 struct Place {
     var name: String
+    var rating : Double
+    var locationLongitude : Double
+    var locationLatitude : Double
+    
 }
 
 class PlaceJSONParser: NSObject {
@@ -20,10 +24,25 @@ class PlaceJSONParser: NSObject {
         let jsonPlaces = incomingJSON["results"].array
 
         for subJSON in jsonPlaces! {
-            if let name = subJSON["name"].rawString() {
-                resultPlaces.append(Place(name: name))
-            }
+            
+            
+            if let name = subJSON["name"].rawString(),
+                let rating = subJSON["rating"].double ,
+                let location = subJSON["geometry"]["location"].dictionaryObject
+            {
+                
+                
+                if let longitude = location["lng"]?.doubleValue,
+                   let latitude = location["lat"]?.doubleValue {
+                        print(longitude)
+                        print(latitude)
+                    let place = Place(name:name, rating:rating, locationLongitude:longitude, locationLatitude:latitude)
+                
+                    resultPlaces.append(place)
+                    print(place)
+                }
 
+            }
         }
         return resultPlaces
     }

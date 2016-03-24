@@ -21,13 +21,31 @@ class PlacesTableViewController: UITableViewController {
 
         if let places = places {
             let place = places[indexPath.row]
-            cell.textLabel?.text = place.name
+            cell.textLabel?.text = place.name + " \(place.rating)"
+            
+            
         }
         return cell
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("cell tapped")
+        print(indexPath)
+        
+        
+        if let places = places {
+            let place = places[indexPath.row]
+            print("selected place " + "\(place) " )
+            
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+            if let detailsVC = storyboard.instantiateViewControllerWithIdentifier("DetailsViewController") as?
+                DetailsViewController {
+                detailsVC.place = place
+                self.navigationController?.pushViewController(detailsVC, animated: true)
+            }
+            
+        }
     }
 
 }
